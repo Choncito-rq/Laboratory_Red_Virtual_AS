@@ -3,8 +3,10 @@ Write-Host "===== DIAGNOSTICO DEL SISTEMA ====="
 Write-Host "Nombre del equipo:"
 hostname
 
-Write-Host "`nDirecciones IP:"
-Get-NetIPAddress | Where-Object {$_.AddressFamily -eq "IPv4"}
+Write-Host ""
+Write-Host "Direcciones IP:"
+ipconfig
 
-Write-Host "`nEspacio en disco:"
+Write-Host ""
+Write-Host "Espacio en disco:"
 Get-PSDrive C
